@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style/bootstrap.css')}}">
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="jumbotron">
+            <div class="col-4 offset-4">
+                <h1 class="text-center">Success Page</h1>
+                <div class="row">
+                    <a href="/clear_session">Home</a>
+                </div>
+                <table class="table">
+                        <thead>
+                        <tbody>
+                          <tr>
+                            <td>Name</td>
+                            <td>{{ dojo['name'] }}</td>
+                          </tr>
+                          <tr>
+                            <td>Location</td>
+                            <td>{{ dojo['location'] }}</td>
+                          </tr>
+                          <tr>
+                            <td>Language</td>
+                            <td>{{ dojo['language'] }}</td>
+                          </tr>
+                          <tr>
+                            <td>Comment</td>
+                            <td>{{ dojo['comment'] }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+            </div>
+        </div>
+    </div>
+</body>
+</html>
