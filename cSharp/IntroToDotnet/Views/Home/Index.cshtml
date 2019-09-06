@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
     <h1>Index page</h1>
     <h2>Server name: @ViewBag.Name</h2>
+    <form action="/users" method="post">
+        <input type="text" name="name" id="">
+        <input type="submit" value="Add User">
+    </form>
 </body>
 </html>

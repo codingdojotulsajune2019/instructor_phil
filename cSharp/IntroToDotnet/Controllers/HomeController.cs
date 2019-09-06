@@ -18,5 +18,13 @@ namespace IntroToDotnet.Controllers
         {
             return $"Process method, name: {name}";
         }
+
+        [HttpPost("/users")]
+        public IActionResult Add(string name)
+        {
+            System.Console.WriteLine($"The form submitted the name: {name}");
+            System.Console.WriteLine("-----------------------------------------");
+            return RedirectToAction("Index");
+        }
     }
 }
