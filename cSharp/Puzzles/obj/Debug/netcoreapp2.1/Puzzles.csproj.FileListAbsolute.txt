@@ -1,0 +1,11 @@
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_june_2019/cSharp/Puzzles/bin/Debug/netcoreapp2.1/Puzzles.deps.json
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_june_2019/cSharp/Puzzles/bin/Debug/netcoreapp2.1/Puzzles.runtimeconfig.json
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_june_2019/cSharp/Puzzles/bin/Debug/netcoreapp2.1/Puzzles.runtimeconfig.dev.json
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_june_2019/cSharp/Puzzles/bin/Debug/netcoreapp2.1/Puzzles.dll
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_june_2019/cSharp/Puzzles/bin/Debug/netcoreapp2.1/Puzzles.pdb
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_june_2019/cSharp/Puzzles/obj/Debug/netcoreapp2.1/Puzzles.csprojAssemblyReference.cache
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_june_2019/cSharp/Puzzles/obj/Debug/netcoreapp2.1/Puzzles.csproj.CoreCompileInputs.cache
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_june_2019/cSharp/Puzzles/obj/Debug/netcoreapp2.1/Puzzles.AssemblyInfoInputs.cache
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_june_2019/cSharp/Puzzles/obj/Debug/netcoreapp2.1/Puzzles.AssemblyInfo.cs
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_june_2019/cSharp/Puzzles/obj/Debug/netcoreapp2.1/Puzzles.dll
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_june_2019/cSharp/Puzzles/obj/Debug/netcoreapp2.1/Puzzles.pdb
