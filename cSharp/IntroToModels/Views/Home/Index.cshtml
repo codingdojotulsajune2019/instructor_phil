@@ -1,0 +1,10 @@
+﻿@model Product
+
+<div>
+    <h1>Index Page</h1>
+    <form action="/products" method="post">
+        <input asp-for="Name">
+        <input asp-for="Amount">
+        <button>Add Product</button>
+    </form>
+</div>
