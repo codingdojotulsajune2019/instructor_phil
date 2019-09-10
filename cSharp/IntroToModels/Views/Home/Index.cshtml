@@ -4,7 +4,13 @@
     <h1>Index Page</h1>
     <form action="/products" method="post">
         <input asp-for="Name">
+        <br>
+        <span class="text-danger" asp-validation-for="Name"></span>
+        <br>
         <input asp-for="Amount">
+        <br>
+        <span class="text-danger" asp-validation-for="Amount"></span>
+        <br>
         <button>Add Product</button>
     </form>
 </div>

@@ -27,6 +27,12 @@ namespace IntroToModels.Controllers
         [HttpPost("/products")]
         public IActionResult AddProduct(Product Product)
         {
+            if(ModelState.IsValid == false)
+            {
+                // failed the validations
+                return View("Index");
+            }
+            // on success we would redirectToAction
             return View("Contact", Product);
         }
 
