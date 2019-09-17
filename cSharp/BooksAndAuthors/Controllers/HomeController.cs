@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BooksAndAuthors.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BooksAndAuthors.Controllers
 {
@@ -19,8 +20,9 @@ namespace BooksAndAuthors.Controllers
         public IActionResult Index()
         {
             IndexView ViewToHTML = new IndexView(){
+                Authors = _context.Authors.ToList(),
                 // lists of authors
-                Authors = _context.Authors.ToList()
+                Books = _context.Books.Include(book => book.Author).ToList()
             };
             return View(ViewToHTML);
         }
@@ -46,6 +48,25 @@ namespace BooksAndAuthors.Controllers
         {
             Author Author = _context.Authors.SingleOrDefault(author => author.AuthorId == authorId);
             return Json(Author);
+        }
+
+        [HttpPost("books")]
+        public IActionResult AddBook(IndexView ModelFromIndexPage)
+        {
+            Book BookToAdd = ModelFromIndexPage.Book;
+            if(ModelState.IsValid)
+            {
+                // add the book
+                BookToAdd.Author = _context.Authors.FirstOrDefault(author => author.AuthorId == BookToAdd.AuthorId);
+                _context.Add(BookToAdd);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            } else {
+                // display the error messages
+                ModelFromIndexPage.Authors = _context.Authors.ToList();
+                ModelFromIndexPage.Books = _context.Books.Include(book => book.Author).ToList();
+                return View("Index", ModelFromIndexPage);
+            }
         }
 
         public IActionResult Privacy()

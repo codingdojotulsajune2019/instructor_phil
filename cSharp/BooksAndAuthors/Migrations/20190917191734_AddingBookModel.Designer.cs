@@ -3,14 +3,16 @@ using System;
 using BooksAndAuthors.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BooksAndAuthors.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20190917191734_AddingBookModel")]
+    partial class AddingBookModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,35 +34,6 @@ namespace BooksAndAuthors.Migrations
                     b.HasKey("AuthorId");
 
                     b.ToTable("Authors");
-                });
-
-            modelBuilder.Entity("BooksAndAuthors.Models.Book", b =>
-                {
-                    b.Property<int>("BookId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("AuthorId");
-
-                    b.Property<DateTime>("CreatedAt");
-
-                    b.Property<string>("Title")
-                        .IsRequired();
-
-                    b.Property<DateTime>("UpdatedAt");
-
-                    b.HasKey("BookId");
-
-                    b.HasIndex("AuthorId");
-
-                    b.ToTable("Books");
-                });
-
-            modelBuilder.Entity("BooksAndAuthors.Models.Book", b =>
-                {
-                    b.HasOne("BooksAndAuthors.Models.Author", "Author")
-                        .WithMany()
-                        .HasForeignKey("AuthorId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
